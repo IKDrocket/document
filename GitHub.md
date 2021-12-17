@@ -1,49 +1,67 @@
 # ステージングエリアにあげる
 
 ```
-$ git add .
+git add .
 ```
 
 # commit する
 
 ```
-$ git commit -m "commit message!!"
+git commit -m "commit message!!"
 ```
 
 # remote リポジトリに push する
 
 ```
-$ git push origin main
+git push
+git push origin main
 ```
 
 # ブランチを切る
 
 ```
-$ git branch
+git branch
 
-$ git branch develop
-$ git checkout develop
+git branch develop
+git checkout develop
 
-$ git checkout -b develop
+git checkout -b develop
 ```
 
 # ブランチをマージする
 
 ```
-$ git checkout main
-$ git merge develop
-$ git branch -d develop
+git checkout main
+git merge develop
+
+# ブランチを削除
+git branch -d develop
 ```
 
 # リモートリポジトリから強制 pull する
 
 ```
-// 1) リモートの最新を取ってきておいて・・
-$ git fetch origin master
+# リモートの最新を取得
+git fetch origin master
 
-// 2) ローカルのmasterを、リモート追跡のmasterに強制的に合わせる！
-$ git reset --hard origin/master
+# ローカルのmasterを、リモート追跡のmasterに強制的に合わせる
+git reset --hard origin/master
 ```
+
+# コミットはせずに変更を退避
+```
+# 変更を退避
+git stash -u
+
+# 退避した作業の一覧を確認
+git stash list
+stash@{0}: WIP on test: xxxx
+stash@{1}: WIP on commit-sample: xxxx
+
+# 退避した作業を戻す
+git stash apply stash@{0}
+```
+
 
 # コミット前に戻す
 
