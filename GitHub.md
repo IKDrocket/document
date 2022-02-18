@@ -72,3 +72,13 @@ git reset --soft HEAD^
 // 直前のコミット作成の直後に戻す
 git reset --hard HEAD^
 ```
+
+# マージ前に戻す
+
+```
+// マージしたらコンフリクトした。やっぱりやめる。
+git reset --soft HEAD^
+
+// マージしたらコンフリクトした。その後編集したが、やめる。
+git reset --hard HEAD
+```
