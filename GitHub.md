@@ -38,6 +38,16 @@ git merge develop
 git branch -d develop
 ```
 
+# ブランチをrebaseする
+
+```
+git pull
+git checkout develop
+
+git rebase main
+git push --force-with-lease origin develop
+```
+
 # リモートリポジトリから強制 pull する
 
 ```
